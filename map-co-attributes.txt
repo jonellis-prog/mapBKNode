@@ -1,0 +1,24 @@
+https://geocode.maps.co/search?q=Statue+of+Liberty+NY+US&api_key=69397bb014ee6937605754dbn999336 
+
+GeoCodoing pwd: b26qBPSdfpByFyE  jon.ellis 
+
+API Key:
+69397bb014ee6937605754dbn999336
+
+Geocoding Plan:
+25,000 @ 5 req/sec; then 1 req/sec
+Current Usage:
+0 Requests
+
+You have successfully created a new geocoding API key. The details are below:
+API KEY: 69397bb014ee6937605754dbn999336
+For faster geocoding, please see our Premium Geocoding Plans.
+
+Using Your API Key:
+Forward Geocode (Convert human-readable address to coordinates):
+https://geocode.maps.co/search?q=address&api_key=69397bb014ee6937605754dbn999336
+Reverse Geocode (Convert coordinates to human-readable address):
+https://geocode.maps.co/reverse?lat=latitude&lon=longitude&api_key=69397bb014ee6937605754dbn999336
+
+e6248909ICpac!@State pwd for account
+e6248909ICpac!@State
