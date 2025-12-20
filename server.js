@@ -21,14 +21,14 @@ module.exports = pool;
 app.set('json spaces', 4)
 
 
-async function getcoordinates(addrToFind) {
+// also switch to async function     async  //JFE
+const getcoordinates = (addr) => {
   let coord = [0,0];
   const mapapikey = '69397bb014ee6937605754dbn999336'; 
 
   // # run some null checking here
-  const addr = addrToFind;
 
-  const searchAddress = addr; // encodeURIComponent(addr);
+  const searchAddress = encodeURIComponent(addr);
 
   console.log(searchAddress);
   callme = "https://geocode.maps.co/search?q=searchAddress&api_key=apiKey";
@@ -46,7 +46,7 @@ async function getcoordinates(addrToFind) {
     "osm_id":175905,
     "lat":"40.7127281",
     "lon":"-74.0060152",
-    "address": {addr},
+    "address": {searchAddress},
     "callme": {callme}
   };
 
@@ -57,16 +57,16 @@ async function getcoordinates(addrToFind) {
 
 app.get('/getcoord/:addresstofind', async (req, res) => {
   addr = req.params.addresstofind;
-  console.log('address to find: ' + addr)
-
+//  console.log('address to find: ' + addr)
+  const coord = getcoordinates(addr);
   // try catch here 
-  let coord =   { 
+  /* let coord =   { 
     "osm_id":175905,
     "lat":"40.7127281",
     "lon":"-74.0060152",
     "address": {addr}
     
-  };
+  }; */
   res.json(coord);
 });
 

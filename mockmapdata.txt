@@ -1,0 +1,15 @@
+http://localhost:8080/getcoord/123+Main+Street  
+
+Mock Response (SOAPUI)
+
+{
+   "osm_id": 175905,
+   "lat": "40.7127281",
+   "lon": "-74.0060152",
+   "address": {"searchAddress": "123%2BMain%2BStreet"},
+   "callme": {"callme": "https://geocode.maps.co/search?q=123%2BMain%2BStreet&api_key=69397bb014ee6937605754dbn999336"}
+}
+
+above callme runs fine in browserrs, but CORS and certificate errors arise when running from server.js
+
+
