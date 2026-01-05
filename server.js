@@ -37,16 +37,22 @@ const getcoordinates = (addr) => {
   console.log(callme);
 
   // call and get coordinates
-/*   const response = await axios.get(callme);
+/*   try{
+   const response = axios.get(callme);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
-    } */
+    } 
+   }
+   catch{
+
+   }
+ */
 
   const resp = { 
     "osm_id":175905,
     "lat":"40.7127281",
     "lon":"-74.0060152",
-    "address": {searchAddress},
+    "address": "NYC",
     "callme": {callme}
   };
 
@@ -54,6 +60,17 @@ const getcoordinates = (addr) => {
   return resp; // return response
     
 };
+
+app.get('/getcoordmock/', async (req, res) => {
+  let coord =   { 
+    "osm_id":175905,
+    "lat":"40.7127281",
+    "lon":"-74.0060152",
+    "address": {addr}
+    
+  }; 
+  res.json(coord);
+})
 
 app.get('/getcoord/:addresstofind', async (req, res) => {
   addr = req.params.addresstofind;
